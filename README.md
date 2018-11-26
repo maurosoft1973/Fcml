@@ -1,4 +1,4 @@
-# Debian Command Line Firebase Cloud Message
+# Command Line Firebase Cloud Message
 This tool allows you to send a notification to an android phone directly from the command line.
 
 ## Compiling and Install
