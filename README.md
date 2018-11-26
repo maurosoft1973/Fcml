@@ -1,8 +1,15 @@
 # Command Line Firebase Cloud Message
 This tool allows you to send a notification to an android phone directly from the command line.
 
+## Requirements
+	libcurl dev library
+	unzip tool
+
 ## Compiling and Install
-make all
+	make all
+
+## Compiling and Install (only Debian)
+	make all-debian
 
 ## Usage
 	fbcm [options]
@@ -14,5 +21,25 @@ Options are:
 * -k Server Key or (--serverkey=<str>)
 * -d Debug Mode or (--debug=<int>)
 * -f Path of the Configuration File or (--configuration=<str>)
-  
+
+The structure of configuration file is:
+	[general]
+	apiserver={apiserver}
+	device={device}
+
+{apiserver} is the server key by Firebase Cloud Messaging
+
+Server Key can be found in:
+
+1. Firebase project settings
+2. Cloud Messaging
+3. then copy the server key
+
 fbcm outputs JSON data to **stdout**.
+
+## Example of Usage
+	fbcm -f /etc/fbcm.conf -t "Hello Title" -m "Hello Message"
+
+	or
+
+	fbcm -t "Hello Title" -m "Hello Message" -s "TokenDevice" -k "ServerKey"
