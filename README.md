@@ -12,7 +12,7 @@ This tool allows you to send a notification to an android phone directly from th
 	make all-debian
 
 ## Usage
-	fbcm [options]
+	fcml [options]
 
 Options are:
 * -t Notification Title or (--title=<str>)
@@ -35,11 +35,11 @@ Server Key can be found in:
 2. Cloud Messaging
 3. then copy the server key
 
-fbcm outputs JSON data to **stdout**.
+fcml outputs JSON data to **stdout**.
 
 ## Example of Usage
-	fbcm -f /etc/fbcm.conf -t "Hello Title" -m "Hello Message"
+	fcml -f /etc/fcml.conf -t "Hello Title" -m "Hello Message"
 
 	or
 
-	fbcm -t "Hello Title" -m "Hello Message" -s "TokenDevice" -k "ServerKey"
+	fcml -t "Hello Title" -m "Hello Message" -s "TokenDevice" -k "ServerKey"
