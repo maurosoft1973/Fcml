@@ -1,5 +1,5 @@
-# Firebase Cloud Message
-This tool allows you to send a notification to an android phone directly from the command line on your linux system.
+# Firebase Cloud Message for Linux (FCML)
+This tool allows you to send a notification to an android phone directly from the command line from your linux system.
 
 ## Requirements
 	libcurl dev library
