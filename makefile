@@ -1,6 +1,6 @@
 all: deps fbcm install clean
 
-all-debian: debian-deps fbcm install clean
+all-debian: debian-deps fcml install clean
 
 .ONESHELL:
 deps:
@@ -12,10 +12,10 @@ deps:
 	rm cjson.zip
 	rm -rf cJSON-master
 
-fbcm: source/library/argparse.o source/library/ini.o source/fbcm.o
-	gcc -o fbcm source/library/argparse.o source/library/ini.o source/fbcm.o -lcurl -lcjson
-	cp fbcm package/usr/local/bin/fbcm
-	cp source/fbcm.conf package/etc/fbcm.conf
+fcml: src/library/argparse.o src/library/ini.o src/fcml.o
+	gcc -o fcml src/library/argparse.o src/library/ini.o src/fcml.o -lcurl -lcjson
+	cp fcml package/usr/local/bin/fcml
+	cp src/fcml.conf package/etc/fcml.conf
 
 install:
 	cp fbcm /usr/local/bin/fbcm
@@ -34,9 +34,9 @@ debian-deps:
 
 debian-package:
 	dpkg-deb --build package
-	mv package.deb fbcm.deb
+	mv package.deb fcml.deb
 
 .PHONY: clean
 clean:
-	rm *.o
-	rm library/*.o
+	rm src/*.o
+	rm src/library/*.o
