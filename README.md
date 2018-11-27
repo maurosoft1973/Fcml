@@ -23,9 +23,9 @@ Options are:
 * -f Path of the Configuration File or (--configuration=<str>)
 
 The structure of configuration file is:
-	[general]
-	apiserver={apiserver}
-	device={device}
+	[general]  
+	apiserver={apiserver}  
+è	device={device}  
 
 {apiserver} is the server key by Firebase Cloud Messaging
 
