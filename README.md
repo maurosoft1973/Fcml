@@ -22,11 +22,12 @@ Options are:
 * -d Debug Mode or (--debug=<int>)
 * -f Path of the Configuration File or (--configuration=<str>)
 
-The structure of configuration file is:
+The structure of configuration file is:  
+
 	[general]  
 	apiserver={apiserver}  
-è	device={device}  
-
+	device={device}  
+	
 {apiserver} is the server key by Firebase Cloud Messaging
 
 Server Key can be found in:
