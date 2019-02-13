@@ -198,7 +198,8 @@ int main(int argc, const char **argv)
     notification.to = device;
     notification.time_to_live = ttl;
 	notification.priority = priority;
-    
+    notification.text = &notification_text;
+
     CURL *curl;
     CURLcode res;
     
