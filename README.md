@@ -24,9 +24,9 @@ Options are:
 
 The structure of configuration file is:  
 
-	[general]  
-	apiserver={apiserver}  
-	device={device}  
+[general]  
+apiserver={apiserver}  
+device={device}  
 	
 {apiserver} is the server key by Firebase Cloud Messaging
 
